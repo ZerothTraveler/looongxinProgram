@@ -1,0 +1,16 @@
+{
+    "files.associations": {
+        "fcntl.h": "c",
+        "unistd.h": "c",
+        "hx711.h": "c",
+        "tcp_client.h": "c",
+        "pthread.h": "c",
+        "stdint.h": "c",
+        "stdio.h": "c",
+        "stdlib.h": "c",
+        "socket.h": "c",
+        "string.h": "c",
+        "switch.h": "c",
+        "time.h": "c"
+    }
+}
