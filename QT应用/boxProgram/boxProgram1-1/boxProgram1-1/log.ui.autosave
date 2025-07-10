@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>log</class>
+ <widget class="QWidget" name="log">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>250</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QFrame
+{
+	background-color: rgb(108,108,108);
+	border-radius:12px;
+}
+QLabel
+{
+	color:white;
+}
+QLineEdit
+{
+	border-radius:6px;
+}
+QPushButton
+{
+	border-radius:6px;
+	background-color:rgb(138, 226, 52);
+}
+QPushButton:pressed
+{
+	background-color:rgb(170,170,0);
+}
+QStackedWidget
+{
+	background-color:rgb(108,108,108);
+}</string>
+  </property>
+  <widget class="QFrame" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>251</width>
+     <height>301</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QStackedWidget" name="logStackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>231</width>
+      <height>281</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="currentIndex">
+     <number>1</number>
+    </property>
+    <widget class="QWidget" name="page">
+     <widget class="QLineEdit" name="userLineEdit">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>50</y>
+        <width>171</width>
+        <height>31</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>30</y>
+        <width>67</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>用户名</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="longinButton">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>190</y>
+        <width>102</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton
+{
+	border-radius:6px;
+	background-color:rgb(114, 159, 207);
+}</string>
+      </property>
+      <property name="text">
+       <string>登录</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="enrollButton">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>190</y>
+        <width>102</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton
+{
+	border-radius:6px;
+	background-color:rgb(114, 159, 207);
+}</string>
+      </property>
+      <property name="text">
+       <string>注册</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="passwordLineEdit">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>130</y>
+        <width>171</width>
+        <height>31</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>110</y>
+        <width>67</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>密码</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="feedbackLabel">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>170</y>
+        <width>111</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="faceLonginButton">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>230</y>
+        <width>102</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton
+{
+	border-radius:6px;
+	background-color:rgb(114, 159, 207);
+}</string>
+      </property>
+      <property name="text">
+       <string>人脸登录</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_2">
+     <widget class="QPushButton" name="face_transcribeButton">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>190</y>
+        <width>102</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton
+{
+	border-radius:6px;
+	background-color:rgb(114, 159, 207);
+}</string>
+      </property>
+      <property name="text">
+       <string>人脸录制</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="face_confirmButton">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>190</y>
+        <width>102</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton
+{
+	border-radius:6px;
+	background-color:rgb(114, 159, 207);
+}</string>
+      </property>
+      <property name="text">
+       <string>确认绑定</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>170</y>
+        <width>211</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>提示：点击四次录制识别更精准</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>30</y>
+        <width>91</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>注册用户名</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="enrollUsernameLineEdit">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>50</y>
+        <width>171</width>
+        <height>31</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>110</y>
+        <width>67</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>注册密码</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="enrollPasswareLineEdit">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>130</y>
+        <width>171</width>
+        <height>31</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="acceptEnrollButton">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>230</y>
+        <width>102</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton
+{
+	border-radius:6px;
+	background-color:rgb(114, 159, 207);
+}</string>
+      </property>
+      <property name="text">
+       <string>确认注册</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="debugRegisterLabel">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>10</y>
+        <width>111</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
